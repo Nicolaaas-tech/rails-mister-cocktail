@@ -1,0 +1,10 @@
+<h1>The Greatest</h1>
+
+<h2>Let's create a new cocktail</h2>
+
+<%#= render "form" %>
+
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Let's add your new cocktail", class: "btn btn-primary" %>
+<% end %>
