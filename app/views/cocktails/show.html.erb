@@ -1,9 +1,14 @@
 <h1>The Greatest</h1>
 
-<h2>This is your new cocktail <%= @cocktail.name  %> </h2>
+<h2> <%= @cocktail.name %> is your new cocktail ! </h2>
 
 <ul class="list-group">
   <% @cocktail.doses.each do |dose| %>
     <li class="list-group-item"><%= dose.description %></li>
+    <li class="list-group-item"><%= dose.ingredient.name %></li>
   <% end %>
 </ul>
+
+<%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+
+<%= link_to "Go back to home page", cocktails_path, class: "btn btn-primary" %>
