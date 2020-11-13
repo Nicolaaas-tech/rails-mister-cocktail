@@ -21,3 +21,6 @@ ingredients["drinks"].each do |ingredient|
   i = Ingredient.create(name: ingredient["strIngredient1"])
   puts "create #{i.name}"
 end
+
+Cloudinary::Uploader.upload("san_francisco.jpg")
+Cloudinary::Uploader.upload("boris_retreat_2017.jpg")
