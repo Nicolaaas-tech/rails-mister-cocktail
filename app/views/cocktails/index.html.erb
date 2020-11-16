@@ -7,7 +7,7 @@
 
 <%= link_to "let's create a new cocktail", new_cocktail_path() %>
 
-<% if cocktail.photo.attached? %>
+<% if @cocktail.photo.attached? %>
 <%= cl_image_tag cocktail.photo.key, height: 10, width: 30, crop: :fill %>
 <% end %>
 
